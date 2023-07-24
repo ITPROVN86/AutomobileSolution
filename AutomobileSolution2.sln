@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33717.318
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AutoMobileLibrary", "AutoMobileLibrary\AutoMobileLibrary.csproj", "{B33F8D41-A1EA-4197-A587-723A73B18597}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AutomobileWinApp", "AutomobileWinApp\AutomobileWinApp.csproj", "{23DC2EF5-EEB7-44E2-91A2-CEA35F97A7F2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B33F8D41-A1EA-4197-A587-723A73B18597}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B33F8D41-A1EA-4197-A587-723A73B18597}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B33F8D41-A1EA-4197-A587-723A73B18597}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B33F8D41-A1EA-4197-A587-723A73B18597}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23DC2EF5-EEB7-44E2-91A2-CEA35F97A7F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23DC2EF5-EEB7-44E2-91A2-CEA35F97A7F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23DC2EF5-EEB7-44E2-91A2-CEA35F97A7F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23DC2EF5-EEB7-44E2-91A2-CEA35F97A7F2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2E2F52B7-07D3-4DED-84EB-21B212B009A3}
+	EndGlobalSection
+EndGlobal
