@@ -61,7 +61,7 @@ namespace AutoMobileLibrary.DataAccess
             }
             return cars;
         }
-
+     
         public Car GetCarByID(int carID)
         {
             Car car = null;
@@ -102,13 +102,13 @@ namespace AutoMobileLibrary.DataAccess
                 Car c = GetCarByID(car.CarID);
                 if (c == null)
                 {
-                    string sql = "INSERT INTO Cars(CarID, CarName, Manufacturer, Price, ReleasedYear) Values(@CarID,@CarName, @Manufacturer, @Price,@ReleasedYear";
+                    string sql = "INSERT INTO Cars(CarName, Manufacturer, Price, ReleasedYear) Values(@CarName, @Manufacturer, @Price,@ReleasedYear)";
                     var parameters = new List<SqlParameter>();
-                    parameters.Add(dataProvider.CreateParameter("@CarID", 4, car.CarID, DbType.Int32));
+                    //parameters.Add(dataProvider.CreateParameter("@CarID", 4, car.CarID, DbType.Int32));
                     parameters.Add(dataProvider.CreateParameter("@CarName", 50, car.CarName, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@Manufacturer", 50, car.CarName, DbType.String));
-                    parameters.Add(dataProvider.CreateParameter("@Price", 50, car.CarName, DbType.Decimal));
-                    parameters.Add(dataProvider.CreateParameter("@ReleasedYear", 4, car.CarName, DbType.Int32));
+                    parameters.Add(dataProvider.CreateParameter("@Manufacturer", 50, car.Manufacturer, DbType.String));
+                    parameters.Add(dataProvider.CreateParameter("@Price", 50, car.Price, DbType.Decimal));
+                    parameters.Add(dataProvider.CreateParameter("@ReleasedYear", 4, car.ReleaseYear, DbType.Int32));
                     dataProvider.Insert(sql, CommandType.Text, parameters.ToArray());
                 }
             }

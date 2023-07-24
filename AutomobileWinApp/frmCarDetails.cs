@@ -27,7 +27,7 @@ namespace AutomobileWinApp
             {
                 var car = new Car
                 {
-                    CarID = Convert.ToInt32(txtCarID.Text),
+                    CarID = Convert.ToInt32(txtCarID.Text==""?0: txtCarID.Text),
                     CarName = txtCarName.Text,
                     Manufacturer = cboManufacturer.Text,
                     Price = decimal.Parse(txtPrice.Text),
@@ -56,7 +56,7 @@ namespace AutomobileWinApp
 
         private void frmCarDetails_Load(object sender, EventArgs e)
         {
-            //cboManufacturer.SelectedIndex = 0;
+            cboManufacturer.SelectedIndex = 0;
             txtCarID.Enabled = !InsertOrUpdate;
             //If Update is true then fill data into form
             if (InsertOrUpdate == true)

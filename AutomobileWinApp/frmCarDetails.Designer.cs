@@ -106,6 +106,7 @@
             // cboManufacturer
             // 
             cboManufacturer.FormattingEnabled = true;
+            cboManufacturer.Items.AddRange(new object[] { "Honda", "Yamaha" });
             cboManufacturer.Location = new System.Drawing.Point(219, 121);
             cboManufacturer.Name = "cboManufacturer";
             cboManufacturer.Size = new System.Drawing.Size(222, 28);
