@@ -164,6 +164,7 @@
             picAvatar.Location = new System.Drawing.Point(404, 93);
             picAvatar.Name = "picAvatar";
             picAvatar.Size = new System.Drawing.Size(199, 127);
+            picAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             picAvatar.TabIndex = 51;
             picAvatar.TabStop = false;
             // 
@@ -177,6 +178,7 @@
             btnUpload.TabIndex = 52;
             btnUpload.Text = "Upload";
             btnUpload.UseVisualStyleBackColor = true;
+            btnUpload.Click += btnUpload_Click;
             // 
             // label6
             // 

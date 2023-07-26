@@ -56,7 +56,7 @@
             btnXoa.Enabled = false;
             btnXoa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnXoa.ForeColor = System.Drawing.Color.Purple;
-            btnXoa.Location = new System.Drawing.Point(442, 388);
+            btnXoa.Location = new System.Drawing.Point(448, 388);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new System.Drawing.Size(117, 40);
             btnXoa.TabIndex = 31;

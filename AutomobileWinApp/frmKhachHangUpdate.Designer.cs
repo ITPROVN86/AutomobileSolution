@@ -129,6 +129,7 @@
             btnCapNhat.TabIndex = 18;
             btnCapNhat.Text = "Cập nhật";
             btnCapNhat.UseVisualStyleBackColor = true;
+            btnCapNhat.Click += btnCapNhat_Click;
             // 
             // btnThoat
             // 
@@ -140,6 +141,7 @@
             btnThoat.TabIndex = 19;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // frmKhachHangUpdate
             // 
@@ -160,6 +162,7 @@
             Controls.Add(label1);
             Name = "frmKhachHangUpdate";
             Text = "frmKhachHangUpdate";
+            Load += frmKhachHangUpdate_Load;
             ResumeLayout(false);
             PerformLayout();
         }

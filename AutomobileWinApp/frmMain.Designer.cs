@@ -32,8 +32,9 @@
             tệpTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             mnu_NhanVien = new System.Windows.Forms.ToolStripMenuItem();
-            hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             mnu_KhachHang = new System.Windows.Forms.ToolStripMenuItem();
+            hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            mnu_HangHoa = new System.Windows.Forms.ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             // 
             // danhMụcToolStripMenuItem
             // 
-            danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { mnu_NhanVien, mnu_KhachHang });
+            danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { mnu_NhanVien, mnu_KhachHang, mnu_HangHoa });
             danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
             danhMụcToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             danhMụcToolStripMenuItem.Text = "Quản lý";
@@ -67,18 +68,25 @@
             mnu_NhanVien.Text = "QL Nhân viên";
             mnu_NhanVien.Click += mnu_NhanVien_Click;
             // 
-            // hoáĐơnToolStripMenuItem
-            // 
-            hoáĐơnToolStripMenuItem.Name = "hoáĐơnToolStripMenuItem";
-            hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
-            hoáĐơnToolStripMenuItem.Text = "Hoá đơn";
-            // 
             // mnu_KhachHang
             // 
             mnu_KhachHang.Name = "mnu_KhachHang";
             mnu_KhachHang.Size = new System.Drawing.Size(224, 26);
             mnu_KhachHang.Text = "QL Khách hàng";
             mnu_KhachHang.Click += mnu_KhachHang_Click;
+            // 
+            // hoáĐơnToolStripMenuItem
+            // 
+            hoáĐơnToolStripMenuItem.Name = "hoáĐơnToolStripMenuItem";
+            hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
+            hoáĐơnToolStripMenuItem.Text = "Hoá đơn";
+            // 
+            // mnu_HangHoa
+            // 
+            mnu_HangHoa.Name = "mnu_HangHoa";
+            mnu_HangHoa.Size = new System.Drawing.Size(224, 26);
+            mnu_HangHoa.Text = "QL Hàng hoá";
+            mnu_HangHoa.Click += mnu_HangHoa_Click;
             // 
             // frmMain
             // 
@@ -104,5 +112,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnu_NhanVien;
         private System.Windows.Forms.ToolStripMenuItem hoáĐơnToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnu_KhachHang;
+        private System.Windows.Forms.ToolStripMenuItem mnu_HangHoa;
     }
 }

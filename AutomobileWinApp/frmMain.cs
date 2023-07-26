@@ -30,5 +30,12 @@ namespace AutomobileWinApp
             f_KH.MdiParent = this;
             f_KH.Show();
         }
+
+        private void mnu_HangHoa_Click(object sender, EventArgs e)
+        {
+            frmHangHoa f_HH = new frmHangHoa();
+            f_HH.MdiParent = this;
+            f_HH.Show();
+        }
     }
 }
