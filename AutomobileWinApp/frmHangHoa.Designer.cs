@@ -1,6 +1,6 @@
 ﻿namespace AutomobileWinApp
 {
-    partial class frmNhanVien
+    partial class frmHangHoa
     {
         /// <summary>
         /// Required designer variable.
@@ -28,74 +28,26 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label2 = new System.Windows.Forms.Label();
-            txtTuKhoa = new System.Windows.Forms.TextBox();
-            txtTimKiem = new System.Windows.Forms.Button();
-            label1 = new System.Windows.Forms.Label();
-            dgvNhanVien = new System.Windows.Forms.DataGridView();
             btnThoat = new System.Windows.Forms.Button();
             btnXoa = new System.Windows.Forms.Button();
             btnChinhSua = new System.Windows.Forms.Button();
             btnThem = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).BeginInit();
+            dgvHangHoa = new System.Windows.Forms.DataGridView();
+            label2 = new System.Windows.Forms.Label();
+            txtTuKhoa = new System.Windows.Forms.TextBox();
+            txtTimKiem = new System.Windows.Forms.Button();
+            label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)dgvHangHoa).BeginInit();
             SuspendLayout();
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(49, 99);
-            label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(154, 20);
-            label2.TabIndex = 17;
-            label2.Text = "Từ khoá cần tìm kiếm:";
-            // 
-            // txtTuKhoa
-            // 
-            txtTuKhoa.Location = new System.Drawing.Point(243, 96);
-            txtTuKhoa.Name = "txtTuKhoa";
-            txtTuKhoa.Size = new System.Drawing.Size(368, 27);
-            txtTuKhoa.TabIndex = 16;
-            // 
-            // txtTimKiem
-            // 
-            txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            txtTimKiem.ForeColor = System.Drawing.Color.Purple;
-            txtTimKiem.Location = new System.Drawing.Point(648, 93);
-            txtTimKiem.Name = "txtTimKiem";
-            txtTimKiem.Size = new System.Drawing.Size(117, 29);
-            txtTimKiem.TabIndex = 15;
-            txtTimKiem.Text = "Tìm kiếm";
-            txtTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            label1.ForeColor = System.Drawing.Color.Purple;
-            label1.Location = new System.Drawing.Point(243, 32);
-            label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(261, 32);
-            label1.TabIndex = 14;
-            label1.Text = "QUẢN LÝ NHÂN VIÊN";
-            // 
-            // dgvNhanVien
-            // 
-            dgvNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvNhanVien.Location = new System.Drawing.Point(49, 144);
-            dgvNhanVien.Name = "dgvNhanVien";
-            dgvNhanVien.RowHeadersWidth = 51;
-            dgvNhanVien.RowTemplate.Height = 29;
-            dgvNhanVien.Size = new System.Drawing.Size(716, 230);
-            dgvNhanVien.TabIndex = 19;
             // 
             // btnThoat
             // 
             btnThoat.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnThoat.ForeColor = System.Drawing.Color.Purple;
-            btnThoat.Location = new System.Drawing.Point(652, 398);
+            btnThoat.Location = new System.Drawing.Point(645, 388);
             btnThoat.Name = "btnThoat";
             btnThoat.Size = new System.Drawing.Size(113, 40);
-            btnThoat.TabIndex = 23;
+            btnThoat.TabIndex = 32;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
             // 
@@ -104,10 +56,10 @@
             btnXoa.Enabled = false;
             btnXoa.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnXoa.ForeColor = System.Drawing.Color.Purple;
-            btnXoa.Location = new System.Drawing.Point(449, 398);
+            btnXoa.Location = new System.Drawing.Point(442, 388);
             btnXoa.Name = "btnXoa";
             btnXoa.Size = new System.Drawing.Size(117, 40);
-            btnXoa.TabIndex = 22;
+            btnXoa.TabIndex = 31;
             btnXoa.Text = "Xoá";
             btnXoa.UseVisualStyleBackColor = true;
             // 
@@ -116,10 +68,10 @@
             btnChinhSua.Enabled = false;
             btnChinhSua.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnChinhSua.ForeColor = System.Drawing.Color.Purple;
-            btnChinhSua.Location = new System.Drawing.Point(243, 398);
+            btnChinhSua.Location = new System.Drawing.Point(236, 388);
             btnChinhSua.Name = "btnChinhSua";
             btnChinhSua.Size = new System.Drawing.Size(130, 40);
-            btnChinhSua.TabIndex = 21;
+            btnChinhSua.TabIndex = 30;
             btnChinhSua.Text = "Chỉnh sửa";
             btnChinhSua.UseVisualStyleBackColor = true;
             // 
@@ -127,14 +79,62 @@
             // 
             btnThem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnThem.ForeColor = System.Drawing.Color.Purple;
-            btnThem.Location = new System.Drawing.Point(49, 398);
+            btnThem.Location = new System.Drawing.Point(42, 388);
             btnThem.Name = "btnThem";
             btnThem.Size = new System.Drawing.Size(123, 40);
-            btnThem.TabIndex = 20;
+            btnThem.TabIndex = 29;
             btnThem.Text = "Thêm mới";
             btnThem.UseVisualStyleBackColor = true;
             // 
-            // frmNhanVien
+            // dgvHangHoa
+            // 
+            dgvHangHoa.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvHangHoa.Location = new System.Drawing.Point(42, 134);
+            dgvHangHoa.Name = "dgvHangHoa";
+            dgvHangHoa.RowHeadersWidth = 51;
+            dgvHangHoa.RowTemplate.Height = 29;
+            dgvHangHoa.Size = new System.Drawing.Size(716, 230);
+            dgvHangHoa.TabIndex = 28;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new System.Drawing.Point(42, 89);
+            label2.Name = "label2";
+            label2.Size = new System.Drawing.Size(154, 20);
+            label2.TabIndex = 27;
+            label2.Text = "Từ khoá cần tìm kiếm:";
+            // 
+            // txtTuKhoa
+            // 
+            txtTuKhoa.Location = new System.Drawing.Point(236, 86);
+            txtTuKhoa.Name = "txtTuKhoa";
+            txtTuKhoa.Size = new System.Drawing.Size(368, 27);
+            txtTuKhoa.TabIndex = 26;
+            // 
+            // txtTimKiem
+            // 
+            txtTimKiem.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            txtTimKiem.ForeColor = System.Drawing.Color.Purple;
+            txtTimKiem.Location = new System.Drawing.Point(641, 83);
+            txtTimKiem.Name = "txtTimKiem";
+            txtTimKiem.Size = new System.Drawing.Size(117, 29);
+            txtTimKiem.TabIndex = 25;
+            txtTimKiem.Text = "Tìm kiếm";
+            txtTimKiem.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            label1.ForeColor = System.Drawing.Color.Purple;
+            label1.Location = new System.Drawing.Point(236, 22);
+            label1.Name = "label1";
+            label1.Size = new System.Drawing.Size(256, 32);
+            label1.TabIndex = 24;
+            label1.Text = "QUẢN LÝ HÀNG HOÁ";
+            // 
+            // frmHangHoa
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,30 +144,28 @@
             Controls.Add(btnXoa);
             Controls.Add(btnChinhSua);
             Controls.Add(btnThem);
-            Controls.Add(dgvNhanVien);
+            Controls.Add(dgvHangHoa);
             Controls.Add(label2);
             Controls.Add(txtTuKhoa);
             Controls.Add(txtTimKiem);
             Controls.Add(label1);
-            Name = "frmNhanVien";
-            Text = "frmNhanVien";
-            ((System.ComponentModel.ISupportInitialize)dgvNhanVien).EndInit();
+            Name = "frmHangHoa";
+            Text = "frmHangHoa";
+            ((System.ComponentModel.ISupportInitialize)dgvHangHoa).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
+        private System.Windows.Forms.Button btnThoat;
+        private System.Windows.Forms.Button btnXoa;
+        private System.Windows.Forms.Button btnChinhSua;
+        private System.Windows.Forms.Button btnThem;
+        private System.Windows.Forms.DataGridView dgvHangHoa;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtTuKhoa;
         private System.Windows.Forms.Button txtTimKiem;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button btnChinhSua;
-        private System.Windows.Forms.Button btnThem;
-        private System.Windows.Forms.DataGridView dgvNhanVien;
-        private System.Windows.Forms.Button btnThoat;
-        private System.Windows.Forms.Button btnXoa;
     }
 }

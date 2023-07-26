@@ -40,7 +40,6 @@ namespace AutomobileWinApp
                 {
                     errorProvider1.Clear();
                     // Thực hiện xử lý đăng nhập ở đây
-
                     var nguoiDung = GetNguoiDungObject();
                     var user = nguoiDungRepository.GetNguoiDungLogin(nguoiDung.TenDangNhap, nguoiDung.MatKhau);
                     if (user != null)

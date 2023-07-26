@@ -23,5 +23,12 @@ namespace AutomobileWinApp
             f_NV.MdiParent = this;
             f_NV.Show();
         }
+
+        private void mnu_KhachHang_Click(object sender, EventArgs e)
+        {
+            frmKhachHang f_KH = new frmKhachHang();
+            f_KH.MdiParent = this;
+            f_KH.Show();
+        }
     }
 }

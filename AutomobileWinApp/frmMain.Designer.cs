@@ -31,8 +31,9 @@
             menuStrip1 = new System.Windows.Forms.MenuStrip();
             tệpTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             mnu_NhanVien = new System.Windows.Forms.ToolStripMenuItem();
+            hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            mnu_KhachHang = new System.Windows.Forms.ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,10 +55,17 @@
             // 
             // danhMụcToolStripMenuItem
             // 
-            danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { mnu_NhanVien });
+            danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { mnu_NhanVien, mnu_KhachHang });
             danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
-            danhMụcToolStripMenuItem.Size = new System.Drawing.Size(90, 24);
-            danhMụcToolStripMenuItem.Text = "Danh mục";
+            danhMụcToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
+            danhMụcToolStripMenuItem.Text = "Quản lý";
+            // 
+            // mnu_NhanVien
+            // 
+            mnu_NhanVien.Name = "mnu_NhanVien";
+            mnu_NhanVien.Size = new System.Drawing.Size(224, 26);
+            mnu_NhanVien.Text = "QL Nhân viên";
+            mnu_NhanVien.Click += mnu_NhanVien_Click;
             // 
             // hoáĐơnToolStripMenuItem
             // 
@@ -65,12 +73,12 @@
             hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             hoáĐơnToolStripMenuItem.Text = "Hoá đơn";
             // 
-            // mnu_NhanVien
+            // mnu_KhachHang
             // 
-            mnu_NhanVien.Name = "mnu_NhanVien";
-            mnu_NhanVien.Size = new System.Drawing.Size(224, 26);
-            mnu_NhanVien.Text = "DM Nhân viên";
-            mnu_NhanVien.Click += mnu_NhanVien_Click;
+            mnu_KhachHang.Name = "mnu_KhachHang";
+            mnu_KhachHang.Size = new System.Drawing.Size(224, 26);
+            mnu_KhachHang.Text = "QL Khách hàng";
+            mnu_KhachHang.Click += mnu_KhachHang_Click;
             // 
             // frmMain
             // 
@@ -95,5 +103,6 @@
         private System.Windows.Forms.ToolStripMenuItem danhMụcToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem mnu_NhanVien;
         private System.Windows.Forms.ToolStripMenuItem hoáĐơnToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem mnu_KhachHang;
     }
 }

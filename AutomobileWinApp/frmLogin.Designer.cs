@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLogin));
             label1 = new System.Windows.Forms.Label();
             label2 = new System.Windows.Forms.Label();
             label3 = new System.Windows.Forms.Label();
@@ -90,6 +91,8 @@
             // 
             btnDangNhap.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             btnDangNhap.ForeColor = System.Drawing.Color.Purple;
+            btnDangNhap.Image = (System.Drawing.Image)resources.GetObject("btnDangNhap.Image");
+            btnDangNhap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             btnDangNhap.Location = new System.Drawing.Point(219, 230);
             btnDangNhap.Name = "btnDangNhap";
             btnDangNhap.Size = new System.Drawing.Size(129, 41);
