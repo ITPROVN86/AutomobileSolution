@@ -1,4 +1,5 @@
-﻿using AutoMobileLibrary.BussinessObject;
+﻿using AutoMobileLibrary.App_Code;
+using AutoMobileLibrary.BussinessObject;
 using AutoMobileLibrary.Repository;
 using System;
 using System.Collections.Generic;
@@ -41,12 +42,13 @@ namespace AutomobileWinApp
                     errorProvider1.Clear();
                     // Thực hiện xử lý đăng nhập ở đây
                     var nguoiDung = GetNguoiDungObject();
-                    var user = nguoiDungRepository.GetNguoiDungLogin(nguoiDung.TenDangNhap, nguoiDung.MatKhau);
+                    var user = nguoiDungRepository.GetNguoiDungLogin(nguoiDung.TenDangNhap, Common.EncryptMD5(nguoiDung.MatKhau));
                     if (user != null)
                     {
                         this.Visible = false;
                         if (MessageBox.Show("Bạn đã đăng nhập thành công", "Thông tin") == DialogResult.OK)
                         {
+                            Common.WriteLog("Login", "btnDangNhap_Click", nguoiDung.TenDangNhap+ " đăng nhập hệ thống");
                             frmMain f_main = new frmMain();
                             f_main.Show();
                         }

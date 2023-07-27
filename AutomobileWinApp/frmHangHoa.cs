@@ -120,7 +120,38 @@ namespace AutomobileWinApp
                 source.DataSource = hangHoas;
 
                 dgvHangHoa.DataSource = null;
+                dgvHangHoa.AutoGenerateColumns = false;
+                dgvHangHoa.Columns.Clear();  // Xóa tất cả các cột hiện có trên DataGridView
+                // Thêm cột ID và Tên vào DataGridView
+                var maHangHoa = new DataGridViewTextBoxColumn();
+                maHangHoa.DataPropertyName = "MaHangHoa";
+                maHangHoa.HeaderText = "Mã Hàng hoá";
+                dgvHangHoa.Columns.Add(maHangHoa);
+
+                var tenHangHoa = new DataGridViewTextBoxColumn();
+                tenHangHoa.DataPropertyName = "TenHangHoa";
+                tenHangHoa.HeaderText = "Tên Hàng hoá";
+                dgvHangHoa.Columns.Add(tenHangHoa);
+
+                var soLuong = new DataGridViewTextBoxColumn();
+                soLuong.DataPropertyName = "SoLuong";
+                soLuong.HeaderText = "Số lượng";
+                dgvHangHoa.Columns.Add(soLuong);
+
+                var donGiaNhap = new DataGridViewTextBoxColumn();
+                donGiaNhap.DataPropertyName = "DonGiaNhap";
+                donGiaNhap.HeaderText = "Đơn giá nhập";
+                dgvHangHoa.Columns.Add(donGiaNhap);
+
+                var donGiaBan = new DataGridViewTextBoxColumn();
+                donGiaBan.DataPropertyName = "DonGiaBan";
+                donGiaBan.HeaderText = "Đơn giá bán";
+                dgvHangHoa.Columns.Add(donGiaBan);
+                // Ẩn cột Ảnh
+                //dgvHangHoa.Columns[5].Visible = false;
                 dgvHangHoa.DataSource = source;
+
+
                 if (hangHoas.Count() == 0)
                 {
                     btnXoa.Enabled = false;
@@ -144,15 +175,16 @@ namespace AutomobileWinApp
             // Kiểm tra nếu người dùng click vào một ô hợp lệ
             {
                 DataGridViewRow row = dgvHangHoa.Rows[e.RowIndex];
+                var hangHoa = hangHoaRepository.GetHangHoaByID(Convert.ToInt32(row.Cells[0].Value));
                 hh = new HangHoa()
                 {
-                    MaHangHoa = Convert.ToInt32(row.Cells[0].Value),
-                    TenHangHoa = row.Cells[1].Value.ToString(),
-                    SoLuong = Convert.ToInt32(row.Cells[2].Value.ToString()),
-                    DonGiaNhap = Convert.ToDecimal(row.Cells[3].Value.ToString()),
-                    DonGiaBan = Convert.ToDecimal(row.Cells[4].Value.ToString()),
-                    Anh = row.Cells[5].Value.ToString(),
-                    GhiChu = row.Cells[5].Value.ToString()
+                    MaHangHoa = hangHoa.MaHangHoa,
+                    TenHangHoa = hangHoa.TenHangHoa,
+                    SoLuong = hangHoa.SoLuong,
+                    DonGiaNhap = hangHoa.DonGiaNhap,
+                    DonGiaBan = hangHoa.DonGiaBan,
+                    Anh = hangHoa.Anh,
+                    GhiChu = hangHoa.GhiChu
                 };
             }
         }

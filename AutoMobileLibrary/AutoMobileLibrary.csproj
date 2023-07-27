@@ -10,6 +10,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Reference Include="Logger">
+      <HintPath>..\AutomobileWinApp\bin\Debug\net5.0-windows\Logger.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Update="appsettings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
