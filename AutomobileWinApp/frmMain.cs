@@ -37,5 +37,10 @@ namespace AutomobileWinApp
             f_HH.MdiParent = this;
             f_HH.Show();
         }
+
+        private void mnu_Thoat_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

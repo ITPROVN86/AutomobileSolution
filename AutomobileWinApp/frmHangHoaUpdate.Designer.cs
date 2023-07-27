@@ -229,6 +229,7 @@
             Controls.Add(label1);
             Name = "frmHangHoaUpdate";
             Text = "frmHangHoaUpdate";
+            Load += frmHangHoaUpdate_Load;
             ((System.ComponentModel.ISupportInitialize)picAvatar).EndInit();
             ((System.ComponentModel.ISupportInitialize)txtSoLuong).EndInit();
             ResumeLayout(false);

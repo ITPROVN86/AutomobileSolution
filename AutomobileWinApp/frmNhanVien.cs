@@ -134,10 +134,6 @@ namespace AutomobileWinApp
             this.Close();
         }
 
-        private void dgvNhanVien_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            btnChinhSua_Click(sender, e);
-        }
 
         private void dgvNhanVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -155,6 +151,11 @@ namespace AutomobileWinApp
                     NgaySinh = Convert.ToDateTime(row.Cells[5].Value.ToString())
                 };
             }
+        }
+
+        private void dgvNhanVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            btnChinhSua_Click(sender, e);
         }
     }
 }

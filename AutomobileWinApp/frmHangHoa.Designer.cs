@@ -50,6 +50,7 @@
             btnThoat.TabIndex = 32;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnXoa
             // 
@@ -62,6 +63,7 @@
             btnXoa.TabIndex = 31;
             btnXoa.Text = "Xoá";
             btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnChinhSua
             // 
@@ -74,6 +76,7 @@
             btnChinhSua.TabIndex = 30;
             btnChinhSua.Text = "Chỉnh sửa";
             btnChinhSua.UseVisualStyleBackColor = true;
+            btnChinhSua.Click += btnChinhSua_Click;
             // 
             // btnThem
             // 
@@ -85,6 +88,7 @@
             btnThem.TabIndex = 29;
             btnThem.Text = "Thêm mới";
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // dgvHangHoa
             // 
@@ -95,6 +99,8 @@
             dgvHangHoa.RowTemplate.Height = 29;
             dgvHangHoa.Size = new System.Drawing.Size(716, 230);
             dgvHangHoa.TabIndex = 28;
+            dgvHangHoa.CellClick += dgvHangHoa_CellClick;
+            dgvHangHoa.CellDoubleClick += dgvHangHoa_CellDoubleClick;
             // 
             // label2
             // 
@@ -111,6 +117,7 @@
             txtTuKhoa.Name = "txtTuKhoa";
             txtTuKhoa.Size = new System.Drawing.Size(368, 27);
             txtTuKhoa.TabIndex = 26;
+            txtTuKhoa.TextChanged += txtTuKhoa_TextChanged;
             // 
             // txtTimKiem
             // 
@@ -122,6 +129,7 @@
             txtTimKiem.TabIndex = 25;
             txtTimKiem.Text = "Tìm kiếm";
             txtTimKiem.UseVisualStyleBackColor = true;
+            txtTimKiem.Click += txtTimKiem_Click;
             // 
             // label1
             // 
@@ -151,6 +159,7 @@
             Controls.Add(label1);
             Name = "frmHangHoa";
             Text = "frmHangHoa";
+            Load += frmHangHoa_Load;
             ((System.ComponentModel.ISupportInitialize)dgvHangHoa).EndInit();
             ResumeLayout(false);
             PerformLayout();

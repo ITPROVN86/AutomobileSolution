@@ -89,7 +89,7 @@
             dgvNhanVien.Size = new System.Drawing.Size(716, 230);
             dgvNhanVien.TabIndex = 19;
             dgvNhanVien.CellClick += dgvNhanVien_CellClick;
-            dgvNhanVien.CellContentDoubleClick += dgvNhanVien_CellContentDoubleClick;
+            dgvNhanVien.CellDoubleClick += dgvNhanVien_CellDoubleClick;
             // 
             // btnThoat
             // 
