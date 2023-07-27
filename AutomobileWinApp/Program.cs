@@ -17,7 +17,7 @@ namespace AutomobileWinApp
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmHangHoaUpdate());
+            Application.Run(new frmLogin());
         }
     }
 }

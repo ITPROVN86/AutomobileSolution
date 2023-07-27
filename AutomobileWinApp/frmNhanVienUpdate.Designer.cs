@@ -55,6 +55,7 @@
             btnThoat.TabIndex = 30;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnCapNhat
             // 
@@ -66,6 +67,7 @@
             btnCapNhat.TabIndex = 29;
             btnCapNhat.Text = "Cập nhật";
             btnCapNhat.UseVisualStyleBackColor = true;
+            btnCapNhat.Click += btnCapNhat_Click;
             // 
             // txtDienThoai
             // 
@@ -205,6 +207,7 @@
             Controls.Add(label1);
             Name = "frmNhanVienUpdate";
             Text = "frmNhanVienUpdate";
+            Load += frmNhanVienUpdate_Load;
             ResumeLayout(false);
             PerformLayout();
         }

@@ -55,6 +55,7 @@
             txtTuKhoa.Name = "txtTuKhoa";
             txtTuKhoa.Size = new System.Drawing.Size(368, 27);
             txtTuKhoa.TabIndex = 16;
+            txtTuKhoa.TextChanged += txtTuKhoa_TextChanged;
             // 
             // txtTimKiem
             // 
@@ -87,6 +88,8 @@
             dgvNhanVien.RowTemplate.Height = 29;
             dgvNhanVien.Size = new System.Drawing.Size(716, 230);
             dgvNhanVien.TabIndex = 19;
+            dgvNhanVien.CellClick += dgvNhanVien_CellClick;
+            dgvNhanVien.CellContentDoubleClick += dgvNhanVien_CellContentDoubleClick;
             // 
             // btnThoat
             // 
@@ -98,6 +101,7 @@
             btnThoat.TabIndex = 23;
             btnThoat.Text = "Thoát";
             btnThoat.UseVisualStyleBackColor = true;
+            btnThoat.Click += btnThoat_Click;
             // 
             // btnXoa
             // 
@@ -110,6 +114,7 @@
             btnXoa.TabIndex = 22;
             btnXoa.Text = "Xoá";
             btnXoa.UseVisualStyleBackColor = true;
+            btnXoa.Click += btnXoa_Click;
             // 
             // btnChinhSua
             // 
@@ -122,6 +127,7 @@
             btnChinhSua.TabIndex = 21;
             btnChinhSua.Text = "Chỉnh sửa";
             btnChinhSua.UseVisualStyleBackColor = true;
+            btnChinhSua.Click += btnChinhSua_Click;
             // 
             // btnThem
             // 
@@ -133,6 +139,7 @@
             btnThem.TabIndex = 20;
             btnThem.Text = "Thêm mới";
             btnThem.UseVisualStyleBackColor = true;
+            btnThem.Click += btnThem_Click;
             // 
             // frmNhanVien
             // 
@@ -151,6 +158,7 @@
             Controls.Add(label1);
             Name = "frmNhanVien";
             Text = "frmNhanVien";
+            Load += frmNhanVien_Load;
             ((System.ComponentModel.ISupportInitialize)dgvNhanVien).EndInit();
             ResumeLayout(false);
             PerformLayout();
