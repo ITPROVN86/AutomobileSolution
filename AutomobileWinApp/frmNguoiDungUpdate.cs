@@ -49,7 +49,7 @@ namespace AutomobileWinApp
                 var kh = new NguoiDung
                 {
                     TenDangNhap = txtTenDangNhap.Text,
-                    MatKhau = Common.EncryptMD5(txtMatKhau.Text),
+                    MatKhau = string.IsNullOrEmpty(txtMatKhau.Text)? NguoiDungInfo.MatKhau: Common.EncryptMD5(txtMatKhau.Text),
                     LoaiNguoiDung = Convert.ToInt32(cboLoaiNguoiDung.SelectedValue),
                     MaNguoiDung = Convert.ToInt32(txtMaNguoiDung.Text)
                 };
@@ -86,7 +86,7 @@ namespace AutomobileWinApp
             if (InsertOrUpdate == true)
             {
                 txtTenDangNhap.Text = NguoiDungInfo.TenDangNhap.ToString();
-                //txtMatKhau.Text = NguoiDungInfo.TenKhachHang.ToString();
+                //txtMatKhau.Text = NguoiDungInfo.MatKhau.ToString();
                 txtMaNguoiDung.Text = NguoiDungInfo.MaNguoiDung.ToString();
                 cboLoaiNguoiDung.SelectedValue = NguoiDungInfo.LoaiNguoiDung;
             }

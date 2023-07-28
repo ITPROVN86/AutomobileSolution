@@ -52,14 +52,22 @@ namespace AutomobileWinApp
                             Common.WriteLog("Login", "btnDangNhap_Click", nguoiDung.TenDangNhap + " đăng nhập hệ thống");
                             if (user.LoaiNguoiDung == 1)
                             {
-                                frmMain f_main = new frmMain();
+                                frmMain f_main = new frmMain()
+                                {
+                                    Text = "Hệ thống Quản trị",
+                                };
                                 f_main.Show();
                             }
                             else
                             {
+                                //Khách hàng
                                 if (user.LoaiNguoiDung == 2)
                                 {
-                                    frmMainKhachHang f_main = new frmMainKhachHang();
+                                    frmMainKhachHang f_main = new frmMainKhachHang()
+                                    {
+                                        Text = "Quản trị của Khách hàng",
+                                        NguoiDungInfo = user
+                                    };
                                     f_main.Show();
                                 }
                             }
