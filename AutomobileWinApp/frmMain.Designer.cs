@@ -30,12 +30,13 @@
         {
             menuStrip1 = new System.Windows.Forms.MenuStrip();
             tệpTinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            mnu_Thoat = new System.Windows.Forms.ToolStripMenuItem();
             danhMụcToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             mnu_NhanVien = new System.Windows.Forms.ToolStripMenuItem();
             mnu_KhachHang = new System.Windows.Forms.ToolStripMenuItem();
             mnu_HangHoa = new System.Windows.Forms.ToolStripMenuItem();
             hoáĐơnToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            mnu_Thoat = new System.Windows.Forms.ToolStripMenuItem();
+            mnu_QLNguoiDung = new System.Windows.Forms.ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,9 +57,16 @@
             tệpTinToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             tệpTinToolStripMenuItem.Text = "Tệp tin";
             // 
+            // mnu_Thoat
+            // 
+            mnu_Thoat.Name = "mnu_Thoat";
+            mnu_Thoat.Size = new System.Drawing.Size(130, 26);
+            mnu_Thoat.Text = "Thoát";
+            mnu_Thoat.Click += mnu_Thoat_Click;
+            // 
             // danhMụcToolStripMenuItem
             // 
-            danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { mnu_NhanVien, mnu_KhachHang, mnu_HangHoa });
+            danhMụcToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { mnu_NhanVien, mnu_KhachHang, mnu_HangHoa, mnu_QLNguoiDung });
             danhMụcToolStripMenuItem.Name = "danhMụcToolStripMenuItem";
             danhMụcToolStripMenuItem.Size = new System.Drawing.Size(73, 24);
             danhMụcToolStripMenuItem.Text = "Quản lý";
@@ -90,12 +98,12 @@
             hoáĐơnToolStripMenuItem.Size = new System.Drawing.Size(81, 24);
             hoáĐơnToolStripMenuItem.Text = "Hoá đơn";
             // 
-            // mnu_Thoat
+            // mnu_QLNguoiDung
             // 
-            mnu_Thoat.Name = "mnu_Thoat";
-            mnu_Thoat.Size = new System.Drawing.Size(224, 26);
-            mnu_Thoat.Text = "Thoát";
-            mnu_Thoat.Click += mnu_Thoat_Click;
+            mnu_QLNguoiDung.Name = "mnu_QLNguoiDung";
+            mnu_QLNguoiDung.Size = new System.Drawing.Size(224, 26);
+            mnu_QLNguoiDung.Text = "QL Người dùng";
+            mnu_QLNguoiDung.Click += mnu_QLNguoiDung_Click;
             // 
             // frmMain
             // 
@@ -123,5 +131,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnu_KhachHang;
         private System.Windows.Forms.ToolStripMenuItem mnu_HangHoa;
         private System.Windows.Forms.ToolStripMenuItem mnu_Thoat;
+        private System.Windows.Forms.ToolStripMenuItem mnu_QLNguoiDung;
     }
 }

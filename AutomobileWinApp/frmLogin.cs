@@ -5,6 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.DirectoryServices.ActiveDirectory;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -48,9 +49,20 @@ namespace AutomobileWinApp
                         this.Visible = false;
                         if (MessageBox.Show("Bạn đã đăng nhập thành công", "Thông tin") == DialogResult.OK)
                         {
-                            Common.WriteLog("Login", "btnDangNhap_Click", nguoiDung.TenDangNhap+ " đăng nhập hệ thống");
-                            frmMain f_main = new frmMain();
-                            f_main.Show();
+                            Common.WriteLog("Login", "btnDangNhap_Click", nguoiDung.TenDangNhap + " đăng nhập hệ thống");
+                            if (user.LoaiNguoiDung == 1)
+                            {
+                                frmMain f_main = new frmMain();
+                                f_main.Show();
+                            }
+                            else
+                            {
+                                if (user.LoaiNguoiDung == 2)
+                                {
+                                    frmMainKhachHang f_main = new frmMainKhachHang();
+                                    f_main.Show();
+                                }
+                            }
                         }
                     }
                     else

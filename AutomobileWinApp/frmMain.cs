@@ -42,5 +42,12 @@ namespace AutomobileWinApp
         {
             Application.Exit();
         }
+
+        private void mnu_QLNguoiDung_Click(object sender, EventArgs e)
+        {
+            frmNguoiDung f_Nd = new frmNguoiDung();
+            f_Nd.MdiParent = this;
+            f_Nd.Show();
+        }
     }
 }
