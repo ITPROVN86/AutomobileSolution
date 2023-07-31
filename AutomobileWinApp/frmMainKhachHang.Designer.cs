@@ -33,6 +33,7 @@
             mnu_Thoat = new System.Windows.Forms.ToolStripMenuItem();
             mnu_SanPham = new System.Windows.Forms.ToolStripMenuItem();
             mnu_Chao = new System.Windows.Forms.ToolStripMenuItem();
+            mnu_DangXuat = new System.Windows.Forms.ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -70,11 +71,19 @@
             // 
             // mnu_Chao
             // 
+            mnu_Chao.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] { mnu_DangXuat });
             mnu_Chao.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             mnu_Chao.ForeColor = System.Drawing.Color.FromArgb(192, 0, 192);
             mnu_Chao.Name = "mnu_Chao";
             mnu_Chao.Size = new System.Drawing.Size(64, 27);
             mnu_Chao.Text = "Chào";
+            // 
+            // mnu_DangXuat
+            // 
+            mnu_DangXuat.Name = "mnu_DangXuat";
+            mnu_DangXuat.Size = new System.Drawing.Size(224, 28);
+            mnu_DangXuat.Text = "Đăng xuất";
+            mnu_DangXuat.Click += mnu_DangXuat_Click;
             // 
             // frmMainKhachHang
             // 
@@ -100,5 +109,6 @@
         private System.Windows.Forms.ToolStripMenuItem mnu_Thoat;
         private System.Windows.Forms.ToolStripMenuItem mnu_SanPham;
         private System.Windows.Forms.ToolStripMenuItem mnu_Chao;
+        private System.Windows.Forms.ToolStripMenuItem mnu_DangXuat;
     }
 }

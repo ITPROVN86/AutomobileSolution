@@ -29,7 +29,10 @@ namespace AutomobileWinApp
 
         private void mnu_SanPham_Click(object sender, EventArgs e)
         {
-            frmSanPham f_SP = new frmSanPham();
+            frmSanPham f_SP = new frmSanPham()
+            {
+                Text = "Mua hàng"
+            };
             f_SP.MdiParent = this;
             f_SP.Show();
         }
@@ -37,6 +40,13 @@ namespace AutomobileWinApp
         private void frmMainKhachHang_Load(object sender, EventArgs e)
         {
             mnu_Chao.Text = "Chào: " + khachHangRepository.GetKhachHangByID(Convert.ToInt32(NguoiDungInfo.MaNguoiDung)).TenKhachHang;
+        }
+
+        private void mnu_DangXuat_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            frmLogin f_Login = new frmLogin();
+            f_Login.Show();
         }
     }
 }
