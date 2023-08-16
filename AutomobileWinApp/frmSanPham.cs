@@ -86,6 +86,32 @@ namespace AutomobileWinApp
             {
                 source = new BindingSource();
                 source.DataSource = list_GH;
+
+                dgvCart.DataSource = null;
+                dgvCart.AutoGenerateColumns = false;
+                dgvCart.Columns.Clear();  // Xóa tất cả các cột hiện có trên DataGridView
+                // Thêm cột ID và Tên vào DataGridView
+                var maHangHoa = new DataGridViewTextBoxColumn();
+                maHangHoa.DataPropertyName = "MaHangHoa";
+                maHangHoa.HeaderText = "Mã Hàng hoá";
+                dgvCart.Columns.Add(maHangHoa);
+
+                var soLuong = new DataGridViewTextBoxColumn();
+                soLuong.DataPropertyName = "SoLuong";
+                soLuong.HeaderText = "Số lượng";
+                dgvCart.Columns.Add(soLuong);
+
+                var donGia = new DataGridViewTextBoxColumn();
+                donGia.DataPropertyName = "DonGia";
+                donGia.HeaderText = "Đơn giá";
+                dgvCart.Columns.Add(donGia);
+
+                var xoa = new DataGridViewButtonColumn();
+                xoa.HeaderText = "Xoá";
+                xoa.Text = "Xoa";
+                xoa.UseColumnTextForButtonValue = true;
+                dgvCart.Columns.Add(xoa);
+
                 dgvCart.DataSource = source;
             }
             catch (Exception ex)
@@ -104,11 +130,21 @@ namespace AutomobileWinApp
                 // và thực hiện xử lý mua hàng tương ứng
                 DataGridViewRow row = dgvHangHoa.Rows[e.RowIndex];
                 var MaHangHoa = Convert.ToInt32(row.Cells[0].Value);
+                int SL = Convert.ToInt32(row.Cells[2].Value);//100
                 int SoLuong = 0;
                 if (CheckCart(MaHangHoa))
                 {
                     SoLuong = TinhTongSoLuongTheoMa(MaHangHoa) + 1;
-                    CapNhatSoLuong(Convert.ToInt32(MaHangHoa), SoLuong);
+                    //Kiểm tra số lượng vượt quá cho phép?
+                    if (SoLuong <= SL)
+                    {
+                        CapNhatSoLuong(Convert.ToInt32(MaHangHoa), SoLuong);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Số lượng vượt quá!");
+                        return;
+                    }
                     LoadGioHangList();
                     return;
                 }
@@ -148,6 +184,18 @@ namespace AutomobileWinApp
         public int TinhTongSoLuongTheoMa(int maHangHoa)
         {
             return list_GH.Where(gh => gh.MaHangHoa == maHangHoa).Sum(gh => gh.SoLuong);
+        }
+
+        private void dgvCart_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == dgvCart.Columns[3].Index && e.RowIndex >= 0 && e.RowIndex < dgvCart.Rows.Count - 1)
+            {
+                DataGridViewRow row = dgvCart.Rows[e.RowIndex];
+                var maHangHoa = Convert.ToInt32(row.Cells[0].Value);
+                list_GH.RemoveAll(gh => gh.MaHangHoa == maHangHoa);
+                //MessageBox.Show("Xoá sản phẩm trong giỏ hàng thành công!");
+                LoadGioHangList();
+            }
         }
     }
 }
